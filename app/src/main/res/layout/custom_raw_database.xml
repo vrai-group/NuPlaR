@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dim_foreground_material_light"
+    android:alpha="0.7"
+    >
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:id="@+id/bpImageDb"
+
+        android:layout_alignParentLeft="false"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Texts"
+        android:id="@+id/textOcrDb"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/DeleteButton"
+        android:layout_toRightOf="@+id/bpImageDb"
+        android:layout_toEndOf="@+id/bpImageDb"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteButton"
+        android:layout_alignTop="@+id/bpImageDb"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="Elimina"
+
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoButton"
+        android:src="@drawable/info"
+        android:layout_alignTop="@+id/DeleteButton"
+        android:layout_toLeftOf="@+id/DeleteButton"
+        android:layout_toStartOf="@+id/DeleteButton"
+        android:layout_marginRight="66dp"
+        android:layout_marginEnd="66dp"
+        android:background="#00ffffff" />
+
+</RelativeLayout>

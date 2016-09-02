@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>About OCR Test</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<p>
+<p style="text-align:center"><img src="../images/launcher_icon.png" alt="OCR Test icon"></p>
+<p style="text-align:center">OCR Test<br>Version 0.1<br>Application by VRAI</p>
+<p style="text-align:center"><a href="http://vrai.dii.univpm.it">vrai.dii.univpm.it</a><p>
+
+<hr />
+<p style="text-align:center"><b>Istruzioni</b></p>
+<p>
+  <b>Acquisizione Camera</b><br/>
+  Il rettangolo al centro dello schermo individua l'area di cattura, per la quale il software effettua l'OCR.<br/>
+  Il bottone in basso a destra accende e spegne il led della camera come se fosse una torcia.<br/>
+  Il bottone in alto a destra cattura l'immagine ed effettua l'OCR (per ora in caso non ci sia un risultato viene visualizzata una targa XX000YY).<br/>
+  <br/>
+  <b>Verifica Risultato</b><br/>
+  Effettuata una acquisizione viene mostrato il risultato, del quale &egrave; possibile modificare il testo.<br/>
+  Il bottone in basso a destra salva tutti i dati visualizzati all'interno del database locale, compresa immagine e posizione, se attivate le apposite opzioni nelle preferenze.<br/>
+  Effettuato il salvataggio si ritorna nella modalit&agrave; Acquisizione e viene visualizzato un messaggio di corretto salvataggio.
+  Premendo indietro si esce si ritorna nella modalit&agrave; Acquisizione senza salvare i dati.<br>
+  <br/>
+  <b>Men&ugrave;</b><br/>
+  Event List, visualizza l'elenco delle acquisizioni salvate, premendo su un elemento questo pu&ograve; essere cancellato, dopo conferma.<br/>
+  Export to CSV, esporta il contenuto del database su un file CSV all'interno della cartella dati applicazione, visualizzando un messaggio con il percorso di destinazione.<br/>
+  Settings, preferenze dell'applicazione (essendo sviluppata a partire da una applicazione generica di OCR oltre alle opzioni sul database, ce ne sono altre generali sull'OCR e l'eventuale traduzione che poi si possono togliere o disabilitare).<br/>
+  <br/>
+  <b>Esportazione</b><br/>
+  <p>
+  L'esportazione in formato CSV contiene tutti i dati presenti nel database, le immagini sono salvate esternamente nella stessa cartella nella quale viene creato il file di esportazione.<br/>
+  Elenco delle colonne del CSV:<br/>
+  <ul>
+    <li>id, identificativo progressivo dell'acquisizione;</li>
+    <li>survey, nome della sessione di rilievo (configurabile dalle preferenze);</li>
+    <li>operator, nome dell'operatore di rilievo (configurabile dalle preferenze);</li>
+    <li>datetime, data e ora del rilievo (nel formato yyyy-MM-dd HH:mm:ss);</li>
+    <li>position_lat, latitudine dal sensore GPS (valorizzata se attivata l'opzione di salvataggio nelle preferenze);</li>
+    <li>position_long, longitudine dal sensore GPS (valorizzata se attivata l'opzione di salvataggio nelle preferenze);</li>
+    <li>ocr_bitmap, percorso dell'immagine acquisita (PNG in scala di grigi) su cui &egrave; stato effettuata l'operazione di OCR (valorizzata se attivata l'opzione di salvataggio nelle preferenze);</li>
+    <li>ocr_result, testo risultante dall'operazione di OCR;</li>
+    <li>ocr_confidence, confidenza media risultante dall'operazione di OCR;</li>
+    <li>text, testo risultante dall'operazione di OCR con le eventuali modifiche manuali dell'operatore.</li>
+  </ul>
+  </p>
+</p>
+
+<hr />
+<p style="text-align:center"><a href="changes.html">Change log</a></p>
+<p style="text-align:center"><a href="http://www.apache.org/licenses/LICENSE-2.0.txt">License</a></p>
+
+<hr />
+<p>This app is a mash-up of several open source projects:
+<ul>
+  <li><a href="https://code.google.com/p/tesseract-ocr/">Tesseract OCR</a></li>
+  <li><a href="https://code.google.com/p/tesseract-android-tools/">Tesseract Tools for Android</a></li>
+  <li><a href="https://github.com/zxing/zxing/">ZXing</a></li>
+  <li><a href="https://github.com/rmtheis/android-ocr">Android OCR</a></li>
+</ul>
+</p>
+</body>
+</html>

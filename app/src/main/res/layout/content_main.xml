@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/mainFrame"
+
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/resultView"
+        android:transitionGroup="true">
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/parametersView"
+            android:background="@color/dim_foreground_material_light"
+            android:alpha="0.7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Operatore:"
+                android:textStyle="bold"
+                android:id="@+id/labelOperatore"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_alignTop="@+id/labelSurvey"
+                android:layout_toRightOf="@+id/labelSurvey"
+                android:layout_toEndOf="@+id/labelSurvey"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Text"
+                android:id="@+id/operatoreId"
+                android:layout_below="@+id/labelOperatore"
+                android:layout_alignLeft="@+id/labelOperatore"
+                android:layout_alignStart="@+id/labelOperatore"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Survey:"
+                android:textStyle="bold"
+                android:id="@+id/labelSurvey"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="18dp"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Text"
+                android:id="@+id/surveyId"
+                android:layout_below="@+id/labelSurvey"
+                android:layout_alignLeft="@+id/labelSurvey"
+                android:layout_alignStart="@+id/labelSurvey"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Lunghezza targa"
+                android:textStyle="bold"
+                android:id="@+id/labeltarga"
+                android:layout_alignTop="@+id/labelOperatore"
+                android:layout_toRightOf="@+id/labelOperatore"
+                android:layout_toEndOf="@+id/labelOperatore"
+                android:layout_marginLeft="68dp"
+                android:layout_marginStart="68dp"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Min:"
+                android:textStyle="bold"
+                android:id="@+id/labelMin"
+                android:layout_below="@+id/labeltarga"
+                android:layout_alignLeft="@+id/labeltarga"
+                android:layout_alignStart="@+id/labeltarga"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Text"
+                android:id="@+id/minTarga"
+                android:layout_below="@+id/labeltarga"
+                android:layout_toRightOf="@+id/labelMin"
+                android:layout_toEndOf="@+id/labelMin"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Max:"
+                android:textStyle="bold"
+                android:id="@+id/labelMax"
+                android:layout_below="@+id/labeltarga"
+                android:layout_alignRight="@+id/labeltarga"
+                android:layout_alignEnd="@+id/labeltarga"
+                android:textColor="#fdffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Text"
+                android:id="@+id/maxTarga"
+                android:layout_alignTop="@+id/labelMax"
+                android:layout_toRightOf="@+id/labelMax"
+                android:layout_toEndOf="@+id/labelMax"
+                android:textColor="#fdffff"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifica"
+                android:id="@+id/button"
+                android:textSize="10dp"
+                android:layout_alignBottom="@+id/maxTarga"
+                android:layout_toRightOf="@+id/maxTarga"
+                android:layout_toEndOf="@+id/maxTarga"
+                android:layout_marginLeft="23dp"
+                android:layout_marginStart="23dp"
+                android:layout_alignTop="@+id/labeltarga" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sincronizza"
+                android:id="@+id/sincronizza"
+                android:textSize="10dp"
+                android:layout_alignBottom="@+id/button"
+                android:layout_toRightOf="@+id/button"
+                android:layout_toEndOf="@+id/button"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_alignTop="@+id/button"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/parametersView"
+
+            android:id="@+id/ocrListView"></ListView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RelLayout"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/gpsviewtext"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:autoLink="web"
+            android:background="#0000"
+            android:clickable="true"
+            android:text="Waiting for gps..."
+            android:textColor="#555"
+            android:textSize="19sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:enabled="true"
+            android:visibility="visible" />
+
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

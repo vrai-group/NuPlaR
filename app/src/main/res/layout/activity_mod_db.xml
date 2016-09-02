@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Operatore:"
+        android:textStyle="bold"
+        android:id="@+id/labelOperatore"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contextClickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Survey:"
+        android:textStyle="bold"
+        android:id="@+id/labelSurvey"
+        android:layout_below="@+id/operatoreId"
+        android:layout_alignLeft="@+id/labelOperatore"
+        android:layout_alignStart="@+id/labelOperatore"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lunghezza targa"
+        android:textStyle="bold"
+        android:id="@+id/labeltarga"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/labelSurvey"
+        android:layout_alignStart="@+id/labelSurvey" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Min:"
+        android:textStyle="bold"
+        android:id="@+id/labelMin"
+        android:layout_below="@+id/labeltarga"
+        android:layout_alignLeft="@+id/labeltarga"
+        android:layout_alignStart="@+id/labeltarga"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Max:"
+        android:textStyle="bold"
+        android:id="@+id/labelMax"
+        android:layout_alignBottom="@+id/minTarga"
+        android:layout_alignRight="@+id/labeltarga"
+        android:layout_alignEnd="@+id/labeltarga"
+        android:layout_alignBaseline="@+id/labelMin" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salva"
+        android:id="@+id/button"
+        android:textSize="10dp"
+        android:layout_alignTop="@+id/surveyId"
+        android:layout_toRightOf="@+id/operatoreId"
+        android:layout_toEndOf="@+id/operatoreId"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/operatoreId"
+        android:textSize="18sp"
+
+        android:layout_alignBottom="@+id/labelOperatore"
+        android:layout_toRightOf="@+id/labelOperatore"
+        android:layout_toEndOf="@+id/labelOperatore" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/surveyId"
+        android:textSize="18sp"
+
+        android:layout_alignBottom="@+id/labelSurvey"
+        android:layout_toRightOf="@+id/labelSurvey"
+        android:layout_toEndOf="@+id/labelSurvey" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minTarga"
+        android:textSize="18sp"
+
+        android:layout_alignBottom="@+id/labelMin"
+        android:layout_toRightOf="@+id/labelMin"          />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maxTarga"
+        android:textSize="18sp"
+
+        android:layout_alignBottom="@+id/labelMax"
+        android:layout_toRightOf="@+id/labelMax" />
+
+</RelativeLayout>
